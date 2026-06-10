@@ -135,6 +135,22 @@ npm run dev
 
 ---
 
+## Evidências
+
+### Tela principal — Listagem de tarefas
+
+![Tela principal](docs/print_principal.png)
+
+### Modal de edição
+
+![Modal de edição](docs/print_editar.png)
+
+### Logs da aplicação
+
+![Logs da aplicação](docs/print_logs.png)
+
+---
+
 ## Endpoints da API
 
 | Método   | Rota               | Descrição             | Códigos de resposta              |
