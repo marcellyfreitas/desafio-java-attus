@@ -103,3 +103,12 @@ h1 { margin-bottom: 1.5rem; color: #1a1a2e; }
 .modal-actions { display: flex; gap: .5rem; margin-top: 1rem; }
 
 .modal-actions .btn-secondary { background: #757575; }
+
+.api-error {
+  background: #ffebee;
+  color: #c62828;
+  padding: .75rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  border: 1px solid #ef9a9a;
+}
