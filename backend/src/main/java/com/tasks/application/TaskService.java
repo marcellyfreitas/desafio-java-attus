@@ -23,20 +23,20 @@ public class TaskService {
     public Task create(String title, String description) {
         Task task = new Task(title, description, TaskStatus.PENDING);
         Task saved = repository.save(task);
-        log.info("Task created: id={}, title='{}'", saved.getId(), saved.getTitle());
+        log.info("Tarefa criada: id={}, título='{}'", saved.getId(), saved.getTitle());
         return saved;
     }
 
     public List<Task> findAll() {
         List<Task> tasks = repository.findAll();
-        log.debug("Listed {} tasks", tasks.size());
+        log.debug("Listadas {} tarefas", tasks.size());
         return tasks;
     }
 
     public Task findById(Long id) {
         return repository.findById(id)
                 .orElseThrow(() -> {
-                    log.warn("Task not found: id={}", id);
+                    log.warn("Tarefa não encontrada: id={}", id);
                     return new TaskNotFoundException(id);
                 });
     }
@@ -47,13 +47,13 @@ public class TaskService {
         task.setDescription(description);
         task.setStatus(status);
         Task saved = repository.save(task);
-        log.info("Task updated: id={}, title='{}', status={}", saved.getId(), saved.getTitle(), saved.getStatus());
+        log.info("Tarefa atualizada: id={}, título='{}', status={}", saved.getId(), saved.getTitle(), saved.getStatus());
         return saved;
     }
 
     public void delete(Long id) {
         Task task = findById(id);
         repository.delete(task);
-        log.info("Task deleted: id={}, title='{}'", id, task.getTitle());
+        log.info("Tarefa removida: id={}, título='{}'", id, task.getTitle());
     }
 }
