@@ -1,0 +1,13 @@
+.idea/
+*.iml
+.vscode/
+node_modules/
+dist/
+target/
+*.class
+*.jar
+*.war
+*.log
+.env
+.DS_Store
+docker-data/
